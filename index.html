@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="خدمات النظافة والصيانة ومكافحة الحشرات في الرياض وجدة ومكة.">
+  <title>خدمات منزلية بالرياض وجدة ومكة | 0503260450</title>
+  <style>
+    :root {
+      --ink: #17231f;
+      --muted: #68756f;
+      --cream: #f8f5ee;
+      --paper: #fffdf8;
+      --green: #176b52;
+      --green-dark: #0e4b3b;
+      --mint: #dff1e7;
+      --orange: #e78d42;
+      --line: #e7e5dd;
+      --shadow: 0 24px 70px rgba(20, 57, 44, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(231, 141, 66, .16), transparent 23rem),
+        radial-gradient(circle at 93% 86%, rgba(23, 107, 82, .14), transparent 25rem),
+        var(--cream);
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    a { color: inherit; }
+    .page {
+      width: min(100% - 32px, 1080px);
+      margin: 30px auto;
+    }
+    .flyer {
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid rgba(23, 107, 82, .1);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+    .flyer::before,
+    .flyer::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .flyer::before {
+      width: 280px;
+      height: 280px;
+      background: var(--mint);
+      left: -150px;
+      top: 220px;
+      opacity: .55;
+    }
+    .flyer::after {
+      width: 170px;
+      height: 170px;
+      background: #fbe8d3;
+      right: -75px;
+      bottom: 140px;
+      opacity: .8;
+    }
+    header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      padding: 24px 42px;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(14, 75, 59, .98), rgba(23, 107, 82, .78)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=85") center/cover;
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-weight: 800;
+      color: white;
+    }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      color: white;
+      background: var(--green);
+      border-radius: 14px 14px 14px 4px;
+      box-shadow: 5px 5px 0 #c9e4d5;
+    }
+    .brand-mark svg { width: 25px; height: 25px; }
+    .service-area {
+      margin-top: -8px;
+      color: #e3f3e8;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+    .hero {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 45px;
+      padding: 64px 70px 58px;
+      background:
+        linear-gradient(90deg, rgba(255, 253, 248, .98) 0%, rgba(255, 253, 248, .92) 51%, rgba(255, 253, 248, .38) 100%),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85") center/cover;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 17px;
+      color: var(--orange);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .03em;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      background: var(--orange);
+      border-radius: 9px;
+    }
+    h1 {
+      max-width: 610px;
+      margin: 0;
+      color: var(--green-dark);
+      font-size: clamp(2.2rem, 5.2vw, 4.5rem);
+      line-height: 1.12;
+      letter-spacing: -.06em;
+    }
+    h1 span { color: var(--orange); }
+    .lead {
+      max-width: 530px;
+      margin: 20px auto 27px;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 12px 20px;
+      border: 0;
+      border-radius: 14px;
+      font: inherit;
+      font-size: .94rem;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-3px); }
+    .button svg { width: 19px; height: 19px; }
+    .button-primary {
+      color: white;
+      background: var(--green);
+      box-shadow: 0 9px 20px rgba(23, 107, 82, .22);
+    }
+    .button-primary:hover { background: var(--green-dark); }
+    .button-whatsapp {
+      color: #155b3e;
+      background: #dcf5e4;
+    }
+    .button-whatsapp:hover { background: #c9ebd4; }
+
+    .visual {
+      position: relative;
+      min-height: 320px;
+      display: grid;
+      place-items: center;
+    }
+    .visual::before {
+      content: "";
+      position: absolute;
+      width: 245px;
+      height: 245px;
+      background: var(--mint);
+      border-radius: 48% 52% 58% 42%;
+      transform: rotate(-18deg);
+    }
+    .visual-card {
+      position: relative;
+      width: min(100%, 310px);
+      padding: 28px 24px;
+      color: var(--green-dark);
+      background: rgba(255, 253, 248, .91);
+      border: 1px solid rgba(23, 107, 82, .14);
+      border-radius: 24px;
+      box-shadow: 0 18px 38px rgba(23, 107, 82, .14);
+      text-align: center;
+    }
+    .shield {
+      display: grid;
+      place-items: center;
+      width: 82px;
+      height: 92px;
+      margin: 0 auto 14px;
+      color: white;
+      background: var(--green);
+      clip-path: polygon(50% 0, 90% 15%, 87% 64%, 50% 100%, 13% 64%, 10% 15%);
+    }
+    .shield svg { width: 39px; height: 39px; }
+    .visual-card strong { display: block; font-size: 1.3rem; }
+    .visual-card small { color: var(--muted); }
+    .stamp {
+      position: absolute;
+      top: 10px;
+      left: 11px;
+      display: grid;
+      place-items: center;
+      width: 70px;
+      height: 70px;
+      color: var(--green-dark);
+      background: #f9d6af;
+      border: 2px dashed var(--orange);
+      border-radius: 50%;
+      font-size: .72rem;
+      font-weight: 900;
+      line-height: 1.25;
+      text-align: center;
+      transform: rotate(-12deg);
+    }
+
+    .section {
+      position: relative;
+      z-index: 1;
+      padding: 36px 70px 43px;
+      border-top: 1px solid var(--line);
+    }
+    .section-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+    h2 {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+      line-height: 1.2;
+    }
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .service {
+      padding: 20px 18px;
+      background: #fbfaf5;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      text-align: center;
+    }
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 12px;
+      color: var(--green);
+      background: var(--mint);
+      border-radius: 12px;
+    }
+    .service-icon svg { width: 21px; height: 21px; }
+    .service h3 { margin: 0 0 3px; font-size: 1rem; }
+    .service p { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.55; }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .feature {
+      padding: 14px 10px;
+      color: var(--green-dark);
+      background: #f3f8f3;
+      border-radius: 13px;
+      font-size: .83rem;
+      font-weight: 800;
+      text-align: center;
+    }
+    .feature::before {
+      content: "✓";
+      display: block;
+      width: 26px;
+      height: 26px;
+      margin: 0 auto 5px;
+      color: white;
+      background: var(--green);
+      border-radius: 50%;
+      font-size: .83rem;
+      line-height: 26px;
+    }
+
+    .promise-strip {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 70px 4px;
+      padding: 18px;
+      background: #f5fbf6;
+      border: 1px solid #dcece0;
+      border-radius: 18px;
+    }
+    .promise {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 13px;
+      color: var(--green-dark);
+      font-size: .82rem;
+      font-weight: 800;
+    }
+    .promise span {
+      display: grid;
+      place-items: center;
+      width: 23px;
+      height: 23px;
+      color: white;
+      background: var(--green);
+      border-radius: 50%;
+      font-size: .75rem;
+    }
+    .promise-call {
+      display: inline-flex;
+      align-items: center;
+      min-height: 41px;
+      padding: 8px 17px;
+      color: white;
+      background: var(--orange);
+      border-radius: 12px;
+      font-size: .85rem;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .promise-call:hover { background: #cf7531; transform: translateY(-2px); }
+
+    .about-section {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 30px;
+    }
+    .about-copy { text-align: center; }
+    .about-copy .eyebrow { margin-bottom: 10px; }
+    .about-copy h2 { margin-bottom: 10px; }
+    .about-copy p:last-child {
+      margin: 0 auto;
+      max-width: 510px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .about-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .about-point {
+      padding: 16px 10px;
+      background: #fbfaf5;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      color: var(--green-dark);
+      font-size: .8rem;
+      font-weight: 800;
+    }
+    .about-point svg {
+      display: block;
+      width: 28px;
+      height: 28px;
+      margin: 0 auto 8px;
+      color: var(--orange);
+    }
+
+    .service-carousel {
+      position: relative;
+      min-height: 355px;
+      overflow: hidden;
+      padding: 14px 54px 52px;
+      background: linear-gradient(135deg, #f0f8f2, #fffaf2);
+      border: 1px solid #dfece2;
+      border-radius: 22px;
+    }
+    .carousel-slide {
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 28px;
+      min-height: 280px;
+      animation: slideIn .45s ease;
+    }
+    .carousel-slide.active { display: grid; }
+    .carousel-slide img {
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 14px 28px rgba(23, 107, 82, .14);
+    }
+    .carousel-copy { text-align: center; }
+    .carousel-copy .service-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 12px;
+    }
+    .carousel-copy h3 {
+      margin: 0 0 7px;
+      color: var(--green-dark);
+      font-size: 1.35rem;
+    }
+    .carousel-copy p {
+      max-width: 380px;
+      margin: 0 auto 17px;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .carousel-copy .button { width: auto; }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      color: var(--green-dark);
+      background: white;
+      border: 1px solid #d9e8dc;
+      border-radius: 50%;
+      box-shadow: 0 6px 15px rgba(20, 57, 44, .1);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+    .carousel-arrow:hover { color: white; background: var(--green); }
+    .carousel-prev { right: 12px; }
+    .carousel-next { left: 12px; }
+    .carousel-dots {
+      position: absolute;
+      right: 0;
+      bottom: 17px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+    }
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      background: #b8d7c5;
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .carousel-dot.active {
+      width: 24px;
+      background: var(--orange);
+      border-radius: 999px;
+    }
+    @keyframes slideIn {
+      from { opacity: .3; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .review {
+      padding: 20px 18px;
+      background: #fffaf2;
+      border: 1px solid #f0e4d6;
+      border-radius: 17px;
+      text-align: center;
+    }
+    .stars {
+      margin-bottom: 8px;
+      color: var(--orange);
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+    .review p {
+      margin: 0 0 11px;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.65;
+    }
+    .review strong {
+      color: var(--green-dark);
+      font-size: .84rem;
+    }
+
+    .contact {
+      position: relative;
+      z-index: 1;
+      display: block;
+      text-align: center;
+      align-items: center;
+      gap: 25px;
+      margin: 0 70px 43px;
+      padding: 25px 28px;
+      color: white;
+      background: var(--green-dark);
+      border-radius: 21px;
+    }
+    .contact h2 { color: white; font-size: 1.3rem; }
+    .contact p { margin: 4px 0 0; color: #c8ded4; font-size: .84rem; }
+    .phone {
+      direction: ltr;
+      display: block;
+      margin-top: 5px;
+      color: #fbd09e;
+      font-size: 1.4rem;
+      font-weight: 900;
+      text-decoration: none;
+      letter-spacing: .04em;
+    }
+    .contact .button { flex-shrink: 0; background: white; color: var(--green-dark); }
+    .contact .button { margin-top: 16px; }
+    .contact .button:hover { background: #f6e9dc; }
+    footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 0 70px 29px;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+    footer p { margin: 0; }
+    footer a { color: var(--green); font-weight: 800; text-decoration: none; }
+    .rights { direction: rtl; }
+    .floating-actions {
+      position: fixed;
+      z-index: 10;
+      top: 43%;
+      right: 17px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .floating-actions::before {
+      content: "✨ تواصل الآن";
+      display: block;
+      margin-bottom: 2px;
+      padding: 5px 10px;
+      color: var(--green-dark);
+      background: #fff4df;
+      border: 1px solid #f2d5ad;
+      border-radius: 999px;
+      box-shadow: 0 5px 15px rgba(20, 57, 44, .12);
+      font-size: .7rem;
+      font-weight: 900;
+      white-space: nowrap;
+      animation: glow 2.2s ease-in-out infinite;
+    }
+    .float-button {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 7px 18px rgba(17, 45, 34, .2);
+      transition: transform .2s ease;
+    }
+    .float-button::after {
+      content: "";
+      position: absolute;
+      top: -15%;
+      left: -38%;
+      width: 25%;
+      height: 130%;
+      background: rgba(255, 255, 255, .6);
+      transform: rotate(20deg);
+      animation: shine 3.6s ease-in-out infinite;
+    }
+    .float-button:hover { transform: scale(1.1); }
+    .float-button svg { width: 29px; height: 29px; }
+    .float-whatsapp { background: #20b965; }
+    .float-call { background: var(--orange); }
+    @keyframes shine {
+      0%, 50% { left: -38%; opacity: 0; }
+      62% { opacity: 1; }
+      78%, 100% { left: 125%; opacity: 0; }
+    }
+    @keyframes glow {
+      0%, 100% { transform: translateY(0); box-shadow: 0 5px 15px rgba(20, 57, 44, .12); }
+      50% { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(231, 141, 66, .24); }
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 800px) {
+      .page { width: min(100% - 20px, 650px); margin: 10px auto; }
+      .flyer { border-radius: 22px; }
+      header { padding: 18px 22px; }
+      .hero { grid-template-columns: 1fr; gap: 15px; padding: 42px 25px 38px; }
+      .visual { min-height: 245px; }
+      .visual-card { width: min(100%, 280px); }
+      .section { padding: 30px 25px 35px; }
+      .service-grid { grid-template-columns: 1fr 1fr; }
+      .about-section { grid-template-columns: 1fr; gap: 22px; }
+      .service-carousel { padding-right: 45px; padding-left: 45px; }
+      .reviews-grid { grid-template-columns: 1fr 1fr 1fr; }
+      .promise-strip { margin: 0 25px 4px; }
+      .contact { margin: 0 25px 35px; padding: 23px 20px; }
+      footer { padding: 0 25px 25px; }
+    }
+    @media (max-width: 480px) {
+      header { align-items: center; }
+      h1 { font-size: 2.45rem; }
+      .lead { font-size: .94rem; }
+      .actions { display: grid; grid-template-columns: 1fr; }
+      .button { width: 100%; }
+      .service-grid { grid-template-columns: 1fr; }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .service-carousel { min-height: 520px; padding: 12px 35px 50px; }
+      .carousel-slide { grid-template-columns: 1fr; gap: 16px; min-height: 450px; }
+      .carousel-slide img { height: 170px; }
+      .about-points { grid-template-columns: 1fr; }
+      .promise-strip { display: grid; grid-template-columns: 1fr; margin: 0 25px 4px; padding: 13px 10px; }
+      .promise { justify-content: center; }
+      .promise-call { justify-content: center; }
+      .section-heading { display: flex; }
+      .section-heading p { margin-top: 8px; }
+      .contact { display: block; }
+      .contact .button { width: 100%; margin-top: 16px; }
+      footer { display: block; text-align: center; }
+      footer p + p { margin-top: 6px; }
+      .floating-actions { right: 12px; top: auto; bottom: 16px; flex-direction: column; }
+      .float-button { width: 66px; height: 66px; }
+    }
+  </style>
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    ttq.load('DAANGKBC77U6VIRE44M0');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+</head>
+<body>
+  <main class="page">
+    <article class="flyer">
+      <header>
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v4M7.2 5.2l2.3 2.3M16.8 5.2l-2.3 2.3M5 11h3m8 0h3M8.2 8.8c-1.8 1.1-2.8 2.6-2.8 4.6 0 3.5 2.8 5.6 6.6 5.6s6.6-2.1 6.6-5.6c0-2-1-3.5-2.8-4.6"/>
+              <path d="M9 14.7c1.8 1 4.2 1 6 0"/>
+            </svg>
+          </div>
+          <span>حلول مكافحة موثوقة</span>
+        </div>
+        <div class="service-area">الرياض • جدة • مكة</div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">خدمات منزلية متكاملة</p>
+          <h1>نظافة وصيانة<br><span>ومكافحة حشرات</span></h1>
+          <p class="lead">نخدم الرياض وجدة ومكة بحلول عملية وآمنة، لنمنحك مكانًا أنظف وراحة تدوم.</p>
+          <div class="actions">
+            <a class="button button-primary" href="tel:+966503260450">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z"/>
+              </svg>
+              اتصل الآن
+            </a>
+            <a class="button button-whatsapp" href="https://wa.me/966503260450" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 3.9A10 10 0 0 0 4.3 16.2L3 21l4.9-1.3A10 10 0 1 0 20 3.9ZM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.2.6 2.6.6.4 0 1.4-.6 1.6-1.1.2-.5.2-.9.1-1Z"/>
+              </svg>
+              واتساب
+            </a>
+          </div>
+        </div>
+        <div class="visual" aria-label="خدمة حماية ونظافة">
+          <div class="visual-card">
+            <div class="stamp">خدمة<br>سريعة</div>
+            <div class="shield" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3 5 6v5c0 4.7 3 8.2 7 10 4-1.8 7-5.3 7-10V6l-7-3Z"/>
+                <path d="m8.5 12 2.2 2.2 4.8-5"/>
+              </svg>
+            </div>
+            <strong>خدمة متكاملة</strong>
+            <small>نظافة وصيانة واطمئنان في كل زاوية</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="promise-strip" aria-label="مميزات التواصل والخدمة">
+        <div class="promise"><span>✓</span> رد سريع على اتصالك</div>
+        <div class="promise"><span>✓</span> نخدم الرياض وجدة ومكة</div>
+        <div class="promise"><span>✓</span> حلول آمنة ونتائج فعالة</div>
+        <a class="promise-call" href="tel:+966503260450">اتصل الآن</a>
+      </section>
+
+      <section class="section">
+        <div class="about-section">
+          <div class="about-copy">
+            <p class="eyebrow">عن خدماتنا</p>
+            <h2>نرتّب لك المكان من الألف إلى الياء</h2>
+            <p>فريق واحد لخدمات النظافة والصيانة ومكافحة الحشرات، مع عناية بالتفاصيل واهتمام براحة كل عميل في الرياض وجدة ومكة.</p>
+          </div>
+          <div class="about-points">
+            <div class="about-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v5c0 4.5 3.2 7.7 8 9 4.8-1.3 8-4.5 8-9V7l-8-4Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+              <span>شغل مرتب</span>
+            </div>
+            <div class="about-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0-9-9"/><path d="M3 12h6M3 12l3-3M3 12l3 3M12 3v5M12 3l-3 3M12 3l3 3"/></svg>
+              <span>استجابة سريعة</span>
+            </div>
+            <div class="about-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h3"/><path d="M3 7h3M18 7h3"/></svg>
+              <span>خدمة متكاملة</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>خدماتنا</h2>
+          <p>اختر الخدمة المناسبة وتواصل معنا مباشرة</p>
+        </div>
+        <div class="service-carousel" aria-label="خدماتنا المتحركة">
+          <article class="carousel-slide active">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85" alt="نظافة منزلية شاملة">
+            <div class="carousel-copy">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 16 4-4 3 3 5-6 4 4"/><path d="M4 20h16M5 4h14v16H5z"/></svg></div>
+              <h3>نظافة شاملة</h3>
+              <p>تنظيف الشقق والفلل والمجالس بعناية، من الأرضيات حتى أدق التفاصيل.</p>
+              <a class="button button-whatsapp" href="https://wa.me/966503260450?text=أرغب%20في%20طلب%20خدمة%20نظافة%20شاملة" target="_blank" rel="noopener">واتساب لهذه الخدمة</a>
+            </div>
+          </article>
+          <article class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="تنظيف شقق وفلل ومجالس">
+            <div class="carousel-copy">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg></div>
+              <h3>نظافة الشقق والفلل والمجالس</h3>
+              <p>ترتيب وتنظيف عميق للمساحات السكنية والمجالس لتستقبل ضيوفك براحة.</p>
+              <a class="button button-whatsapp" href="https://wa.me/966503260450?text=أرغب%20في%20طلب%20خدمة%20نظافة%20شقق%20وفلل%20ومجالس" target="_blank" rel="noopener">واتساب لهذه الخدمة</a>
+            </div>
+          </article>
+          <article class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=85" alt="غسيل مكيفات">
+            <div class="carousel-copy">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4zM8 17v3M16 17v3M7 11h10M9 7V4M15 7V4"/></svg></div>
+              <h3>غسيل مكيفات</h3>
+              <p>تنظيف مكيفات يساعد على هواء أنظف وأداء أفضل داخل المكان.</p>
+              <a class="button button-whatsapp" href="https://wa.me/966503260450?text=أرغب%20في%20طلب%20خدمة%20غسيل%20مكيفات" target="_blank" rel="noopener">واتساب لهذه الخدمة</a>
+            </div>
+          </article>
+          <article class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85" alt="صيانة أفران">
+            <div class="carousel-copy">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M7 7h10M7 11h10M8 15h2M14 15h2M8 18h8"/></svg></div>
+              <h3>صيانة أفران</h3>
+              <p>فحص وصيانة الأفران للمساعدة على تشغيل آمن ونتيجة أفضل.</p>
+              <a class="button button-whatsapp" href="https://wa.me/966503260450?text=أرغب%20في%20طلب%20خدمة%20صيانة%20أفران" target="_blank" rel="noopener">واتساب لهذه الخدمة</a>
+            </div>
+          </article>
+          <article class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1000&q=85" alt="مكافحة حشرات">
+            <div class="carousel-copy">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M7.2 5.2l2.3 2.3M16.8 5.2l-2.3 2.3M5 11h3m8 0h3M8.2 8.8c-1.8 1.1-2.8 2.6-2.8 4.6 0 3.5 2.8 5.6 6.6 5.6s6.6-2.1 6.6-5.6c0-2-1-3.5-2.8-4.6"/></svg></div>
+              <h3>مكافحة حشرات</h3>
+              <p>حلول عملية وآمنة للحشرات الزاحفة والطائرة في المنزل والمنشأة.</p>
+              <a class="button button-whatsapp" href="https://wa.me/966503260450?text=أرغب%20في%20طلب%20خدمة%20مكافحة%20حشرات" target="_blank" rel="noopener">واتساب لهذه الخدمة</a>
+            </div>
+          </article>
+          <button class="carousel-arrow carousel-prev" type="button" aria-label="الخدمة السابقة">›</button>
+          <button class="carousel-arrow carousel-next" type="button" aria-label="الخدمة التالية">‹</button>
+          <div class="carousel-dots" aria-label="اختيار الخدمة">
+            <button class="carousel-dot active" type="button" aria-label="الخدمة 1"></button>
+            <button class="carousel-dot" type="button" aria-label="الخدمة 2"></button>
+            <button class="carousel-dot" type="button" aria-label="الخدمة 3"></button>
+            <button class="carousel-dot" type="button" aria-label="الخدمة 4"></button>
+            <button class="carousel-dot" type="button" aria-label="الخدمة 5"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="section-heading">
+          <h2>لماذا نحن؟</h2>
+          <p>نهتم بالتفاصيل الصغيرة</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">استجابة سريعة</div>
+          <div class="feature">أسلوب آمن</div>
+          <div class="feature">نتائج فعالة</div>
+          <div class="feature">الرياض وجدة ومكة</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>آراء عملائنا</h2>
+          <p>تجارب طيبة وراحة بعد الخدمة</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review">
+            <div class="stars" aria-label="5 من 5 نجوم">★★★★★</div>
+            <p>“تعامل راقٍ وسرعة في الوصول، والنتيجة ظهرت من أول خدمة. أنصح بهم.”</p>
+            <strong>— عميل من الرياض</strong>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 من 5 نجوم">★★★★★</div>
+            <p>“شرحوا لنا كل الخطوات بوضوح، والخدمة كانت مرتبة ومريحة جدًا.”</p>
+            <strong>— أم خالد</strong>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 من 5 نجوم">★★★★★</div>
+            <p>“التزام بالمواعيد وشغل نظيف. تواصلت معهم مرة ثانية بكل ثقة.”</p>
+            <strong>— أبو محمد</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div>
+          <h2>جاهز ترتاح من تفاصيل البيت؟</h2>
+          <p>اتصل أو أرسل رسالة واتساب واحجز خدمتك الآن</p>
+          <a class="phone" href="tel:+966503260450">0503260450</a>
+        </div>
+        <a class="button" href="https://wa.me/966503260450" target="_blank" rel="noopener">
+          تواصل عبر واتساب
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.9A10 10 0 0 0 4.3 16.2L3 21l4.9-1.3A10 10 0 1 0 20 3.9ZM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.2.6 2.6.6.4 0 1-.6 1.2-1.1.2-.5.2-.9.1-1Z"/></svg>
+        </a>
+      </section>
+
+      <footer>
+        <p>التواصل: <a href="tel:+966503260450">0503260450</a></p>
+        <p>تم التصميم بواسطة <a href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوى إبراهيم</a></p>
+        <p class="rights">© <span id="year">2026</span> جميع الحقوق محفوظة</p>
+      </footer>
+    </article>
+  </main>
+
+  <nav class="floating-actions" aria-label="أزرار التواصل السريع">
+    <a class="float-button float-whatsapp" href="https://wa.me/966503260450" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.9A10 10 0 0 0 4.3 16.2L3 21l4.9-1.3A10 10 0 1 0 20 3.9ZM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.2.6 2.6.6.4 0 1-.6 1.2-1.1.2-.5.2-.9.1-1Z"/></svg>
+    </a>
+    <a class="float-button float-call" href="tel:+966503260450" aria-label="اتصل الآن">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z"/></svg>
+    </a>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".carousel-slide"));
+    const dots = Array.from(document.querySelectorAll(".carousel-dot"));
+    const previous = document.querySelector(".carousel-prev");
+    const next = document.querySelector(".carousel-next");
+    let activeSlide = 0;
+    let carouselTimer;
+
+    function showSlide(index) {
+      activeSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === activeSlide));
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === activeSlide));
+    }
+
+    function restartCarousel() {
+      clearInterval(carouselTimer);
+      carouselTimer = setInterval(() => showSlide(activeSlide + 1), 4500);
+    }
+
+    previous.addEventListener("click", () => {
+      showSlide(activeSlide - 1);
+      restartCarousel();
+    });
+    next.addEventListener("click", () => {
+      showSlide(activeSlide + 1);
+      restartCarousel();
+    });
+    dots.forEach((dot, i) => dot.addEventListener("click", () => {
+      showSlide(i);
+      restartCarousel();
+    }));
+    restartCarousel();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
